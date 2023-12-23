@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F00B9442B374AAC0033D215 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00B9432B374AAC0033D215 /* Recipe.swift */; };
 		9F532AD32B0FE60600FC6D75 /* BlueRecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F532AD22B0FE60600FC6D75 /* BlueRecipesApp.swift */; };
 		9F532AD52B0FE60600FC6D75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F532AD42B0FE60600FC6D75 /* ContentView.swift */; };
 		9F532AD72B0FE60700FC6D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F532AD62B0FE60700FC6D75 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F00B9432B374AAC0033D215 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		9F532ACF2B0FE60600FC6D75 /* BlueRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F532AD22B0FE60600FC6D75 /* BlueRecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueRecipesApp.swift; sourceTree = "<group>"; };
 		9F532AD42B0FE60600FC6D75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F00B9422B374A770033D215 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F00B9432B374AAC0033D215 /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9F532AC62B0FE60600FC6D75 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +63,7 @@
 			children = (
 				9F532AD22B0FE60600FC6D75 /* BlueRecipesApp.swift */,
 				9F532AD42B0FE60600FC6D75 /* ContentView.swift */,
+				9F00B9422B374A770033D215 /* Model */,
 				9F532AD62B0FE60700FC6D75 /* Assets.xcassets */,
 				9F532AD82B0FE60700FC6D75 /* Preview Content */,
 			);
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F00B9442B374AAC0033D215 /* Recipe.swift in Sources */,
 				9F532AD52B0FE60600FC6D75 /* ContentView.swift in Sources */,
 				9F532AD32B0FE60600FC6D75 /* BlueRecipesApp.swift in Sources */,
 			);
@@ -275,6 +287,8 @@
 				DEVELOPMENT_TEAM = CY5RNY433D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Recipes;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +318,8 @@
 				DEVELOPMENT_TEAM = CY5RNY433D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Recipes;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

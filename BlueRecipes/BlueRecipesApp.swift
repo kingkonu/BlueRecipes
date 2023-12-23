@@ -5,6 +5,7 @@
 //  Created by Alexey Kanaev on 11/23/23.
 //
 
+import SwiftData
 import SwiftUI
 
 @main
@@ -13,5 +14,6 @@ struct BlueRecipesApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Recipe.self)
     }
 }

@@ -11,32 +11,35 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
     @Query var recipes: [Recipe]
-
+    
     var body: some View {
         NavigationStack {
             List {
                 ForEach(recipes) { recipe in
-                    VStack(alignment: .leading) {
-                        Text(recipe.name)
-                            .font(.headline)
-                        Text(recipe.describe)
+                    NavigationLink(value: recipe) {
+                        VStack(alignment: .leading) {
+                            Text(recipe.name)
+                                .font(.headline)
+                            Text(recipe.describe)
+                        }
                     }
                 }
                 .onDelete(perform: deleteRecipe)
             }
             .navigationTitle("Рецепты")
+            .navigationDestination(for: Recipe.self, destination: EditRecipeView.init)
             .toolbar {
                 Button("Add samples", action: addSamples)
             }
         }
     }
-
+    
     func addSamples() {
         let soup = Recipe(name: "Суп")
-
+        
         modelContext.insert(soup)
     }
-
+    
     func deleteRecipe(_ indexSet: IndexSet) {
         for index in indexSet {
             let recipe = recipes[index]

@@ -6,13 +6,27 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct EditRecipeView: View {
+    @Bindable var recipes: Recipe
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            TextField("Название", text: $recipes.name)
+        }
+        .navigationTitle("Изменить название блюда")
     }
 }
 
 #Preview {
-    EditRecipeView()
+    do{
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: Recipe.self, configurations: config)
+        let example = Recipe(name: "Paprica")
+        return EditRecipeView(recipes: example)
+            .modelContainer(container)
+    } catch {
+        fatalError("failed to create model")
+    }
 }

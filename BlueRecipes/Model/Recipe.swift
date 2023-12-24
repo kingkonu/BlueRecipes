@@ -11,7 +11,7 @@ import SwiftData
 @Model
 class Recipe {
     let id = UUID()
-    let name: String
+    var name: String
     let describe: String
     let ingredients: String
     let cooking: String

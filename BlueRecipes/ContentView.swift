@@ -9,8 +9,9 @@ import SwiftData
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.modelContext) var modelContext
     @Query var recipes: [Recipe]
-    
+
     var body: some View {
         NavigationStack {
             List {
@@ -24,8 +25,19 @@ struct ContentView: View {
             }
         }
         .navigationTitle("Рецепты")
+        .toolbar {
+            Button("Add sampels", action: addSampels)
+        }
+    }
+    
+    func addSampels() {
+        let soup = Recipe(name: "Суп")
+
+        modelContext.insert(soup)
     }
 }
+
+
 
 #Preview {
     ContentView()

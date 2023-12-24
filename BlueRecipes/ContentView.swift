@@ -10,15 +10,20 @@ import SwiftUI
 
 struct ContentView: View {
     @Query var recipes: [Recipe]
-
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(recipes) { recipe in
+                    VStack(alignment: .leading) {
+                        Text(recipe.name)
+                            .font(.headline)
+                        Text(recipe.describe)
+                    }
+                }
+            }
         }
-        .padding()
+        .navigationTitle("Рецепты")
     }
 }
 

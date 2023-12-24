@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
     @Query var recipes: [Recipe]
-
+    
     var body: some View {
         NavigationStack {
             List {
@@ -23,20 +23,19 @@ struct ContentView: View {
                     }
                 }
             }
-        }
-        .navigationTitle("Рецепты")
-        .toolbar {
-            Button("Add sampels", action: addSampels)
+            .navigationTitle("Рецепты")
+            .toolbar {
+                Button("Add samples", action: addSamples)
+            }
         }
     }
     
-    func addSampels() {
+    func addSamples() {
         let soup = Recipe(name: "Суп")
-
+        
         modelContext.insert(soup)
     }
 }
-
 
 
 #Preview {

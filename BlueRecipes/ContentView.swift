@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
     @Query var recipes: [Recipe]
-    
+
     var body: some View {
         NavigationStack {
             List {
@@ -22,6 +22,7 @@ struct ContentView: View {
                         Text(recipe.describe)
                     }
                 }
+                .onDelete(perform: deleteRecipe)
             }
             .navigationTitle("Рецепты")
             .toolbar {
@@ -29,13 +30,21 @@ struct ContentView: View {
             }
         }
     }
-    
+
     func addSamples() {
         let soup = Recipe(name: "Суп")
-        
+
         modelContext.insert(soup)
     }
+
+    func deleteRecipe(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let recipe = recipes[index]
+            modelContext.delete(recipe)
+        }
+    }
 }
+
 
 
 #Preview {

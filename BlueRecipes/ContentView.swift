@@ -12,12 +12,14 @@ struct ContentView: View {
     @State private var path = [Recipe]()
     @Environment(\.modelContext) var modelContext
     @State private var sortOrder = SortDescriptor(\Recipe.name)
-    
+    @State private var searchText = ""
+
     var body: some View {
         NavigationStack(path: $path) {
-            RecipeListingView(sort: sortOrder)
+            RecipeListingView(sort: sortOrder, searchString: searchText)
                 .navigationTitle("Рецепты")
                 .navigationDestination(for: Recipe.self, destination: EditRecipeView.init)
+                .searchable(text: $searchText)
                 .toolbar {
                     Button("Добавить рецепт", systemImage: "plus", action: addRecipe)
                     Menu("Sort", systemImage: "arrow.up.arrow.down") {
@@ -30,7 +32,7 @@ struct ContentView: View {
                 }
         }
     }
-    
+
     func addRecipe() {
         let recipe = Recipe()
         modelContext.insert(recipe)

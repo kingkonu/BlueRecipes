@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct RecipeListingView: View {
-    @Query (sort: [SortDescriptor(\Recipe.name, order: .reverse)]) var recipes: [Recipe]
+    @Query (sort: [SortDescriptor(\Recipe.name, order: .reverse)]) var recipes: [Recipe] = []
     @Environment(\.modelContext) var modelContext
     
     

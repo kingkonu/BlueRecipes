@@ -14,6 +14,6 @@ struct BlueRecipesApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Recipe.self)
+        .modelContainer(for: PreCreatedRecipes.self)
     }
 }

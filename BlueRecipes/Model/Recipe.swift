@@ -24,4 +24,30 @@ class Recipe {
         self.cooking = cooking
         self.isFavorite = isFavorite
     }
+
 }
+
+@Model
+class PreCreatedRecipes {
+    var recipes: [Recipe] = []
+
+    init() {
+        addRecipe()
+    }
+
+    //добавляем завтраки
+    func addRecipe() {
+        recipes = recipeData
+    }
+
+    //добавляем завтраки
+    func addRecipeDinner() {
+        recipes = recipeDataDinner
+    }
+    
+    //добавляем завтраки
+    func addRecipeEvening() {
+        recipes = recipeDataEvening
+    }
+}
+

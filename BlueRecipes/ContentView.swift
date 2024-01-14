@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var sortOrder = SortDescriptor(\Recipe.name)
     @State private var searchText = ""
 
+
     var body: some View {
         NavigationStack(path: $path) {
             RecipeListingView(sort: sortOrder, searchString: searchText)
@@ -38,6 +39,7 @@ struct ContentView: View {
         modelContext.insert(recipe)
         path = [recipe]
     }
+
 }
 
 

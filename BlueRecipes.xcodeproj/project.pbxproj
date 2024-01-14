@@ -24,6 +24,8 @@
 		9F532AD62B0FE60700FC6D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F532AD92B0FE60700FC6D75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FB51EDF2B39FD9D00455FF7 /* RecipeListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListingView.swift; sourceTree = "<group>"; };
+		9FD601A22B4328C200A33DF0 /* BlueRecipes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlueRecipes.entitlements; sourceTree = "<group>"; };
+		9FD601A32B43296900A33DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9FD940452B3891420049DF94 /* EditRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,10 +67,11 @@
 		9F532AD12B0FE60600FC6D75 /* BlueRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				9FD601A32B43296900A33DF0 /* Info.plist */,
+				9FD601A22B4328C200A33DF0 /* BlueRecipes.entitlements */,
 				9F532AD22B0FE60600FC6D75 /* BlueRecipesApp.swift */,
 				9F532AD42B0FE60600FC6D75 /* ContentView.swift */,
-				9FB51EDF2B39FD9D00455FF7 /* RecipeListingView.swift */,
-				9FD940452B3891420049DF94 /* EditRecipeView.swift */,
+				9FFDB56F2B430AB3001AFF5B /* Views */,
 				9F00B9422B374A770033D215 /* Model */,
 				9F532AD62B0FE60700FC6D75 /* Assets.xcassets */,
 				9F532AD82B0FE60700FC6D75 /* Preview Content */,
@@ -82,6 +85,15 @@
 				9F532AD92B0FE60700FC6D75 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FFDB56F2B430AB3001AFF5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9FB51EDF2B39FD9D00455FF7 /* RecipeListingView.swift */,
+				9FD940452B3891420049DF94 /* EditRecipeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +301,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BlueRecipes/BlueRecipes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BlueRecipes/Preview Content\"";
 				DEVELOPMENT_TEAM = CY5RNY433D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlueRecipes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Recipes;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -320,12 +334,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BlueRecipes/BlueRecipes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BlueRecipes/Preview Content\"";
 				DEVELOPMENT_TEAM = CY5RNY433D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlueRecipes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Recipes;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

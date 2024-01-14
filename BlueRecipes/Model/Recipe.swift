@@ -11,10 +11,10 @@ import SwiftData
 @Model
 class Recipe {
     let id = UUID()
-    var name: String
-    let describe: String
-    let ingredients: String
-    let cooking: String
+    var name: String = ""
+    let describe: String = ""
+    let ingredients: String = ""
+    let cooking: String = ""
     var isFavorite: Bool
 
     init(name: String = "", describe: String = "", ingredients: String = "", cooking: String = "", isFavorite: Bool = false) {

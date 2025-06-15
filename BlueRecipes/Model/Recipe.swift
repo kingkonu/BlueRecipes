@@ -12,9 +12,13 @@ import SwiftData
 class Recipe {
     let id = UUID()
     var name: String = ""
-    let describe: String = ""
-    let ingredients: String = ""
-    let cooking: String = ""
+    // These properties need to be mutable so that the initializer can
+    // assign the provided values. Declaring them as constants with a
+    // default value prevents re-assignment in init which results in a
+    // compile-time error.
+    var describe: String = ""
+    var ingredients: String = ""
+    var cooking: String = ""
     var isFavorite: Bool
 
     init(name: String = "", describe: String = "", ingredients: String = "", cooking: String = "", isFavorite: Bool = false) {
